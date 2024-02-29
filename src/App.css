@@ -113,32 +113,6 @@ i {
   min-width: 100%;
 }
 
-.card {
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  row-gap: 10px;
-  padding: 20px;
-  flex: 1;
-}
-
-.titleCard {
-  font-weight: 600;
-  font-size: 15px;
-  color: gray;
-}
-
-.textMiddleCard {
-  color: black;
-  font-weight: 700;
-  font-size: 28px;
-}
-
-.viewDetailsCard {
-  text-decoration: underline;
-}
-
 .title {
   font-size: 24px;
   font-weight: 700;

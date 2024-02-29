@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import ButtonTheme from './components/ButtonTheme';
 import { useState } from 'react';
+import ButtonTheme from './components/ButtonTheme/ButtonTheme';
+import ButtonRounded from './components/ButtonRounded/ButtonRounded';
+import SquaredCard from './components/SquaredCard/SquaredCard';
 
 function App() {
-   const [selectedTheme, setSelectedTheme] = useState("moon")
+   const [selectedTheme, setSelectedTheme] = useState("sun")
 
    const [selectedMenu, setSelectedMenu] = useState(1)
 
@@ -25,7 +26,7 @@ function App() {
           <i class="far fa-plus-square"></i>
           <i class="fas fa-film"></i>
           <i class="far fa-heart"></i>
-          <ButtonTheme setIcon={setSelectedTheme} icon={selectedTheme} />
+          <ButtonTheme icon={selectedTheme} setIcon={setSelectedTheme} />
         </div>
      </header>
      <main className='middleContainer'>
@@ -78,50 +79,10 @@ function App() {
         </div>
         <div className='rightMiddleContainer'>
             <div className='rowOfCards'>
-              <div className='card'>
-                <div className='titleCard'>
-                  Total <br /> Followers
-                </div>
-                <div className='textMiddleCard'>
-                  100
-                </div>
-                <div className='viewDetailsCard'>
-                  View Details
-                </div>
-              </div>
-              <div className='card'>
-                <div className='titleCard'>
-                  Total <br /> Followers
-                </div>
-                <div className='textMiddleCard'>
-                  100
-                </div>
-                <div className='viewDetailsCard'>
-                  View Details
-                </div>
-              </div>
-              <div className='card'>
-                <div className='titleCard'>
-                  Total <br /> Followers
-                </div>
-                <div className='textMiddleCard'>
-                  100
-                </div>
-                <div className='viewDetailsCard'>
-                  View Details
-                </div>
-              </div>
-              <div className='card'>
-                <div className='titleCard'>
-                  Total <br /> Followers
-                </div>
-                <div className='textMiddleCard'>
-                  100
-                </div>
-                <div className='viewDetailsCard'>
-                  View Details
-                </div>
-              </div>
+              <SquaredCard />
+              <SquaredCard />
+              <SquaredCard />
+              <SquaredCard />
             </div>
             <div className='title'>
               Recent Posts
@@ -162,6 +123,10 @@ function App() {
                     <i class="far fa-comment"></i>
                  </div>
               </div>
+            </div>
+            <div style={{display: "flex", columnGap: 10}}>
+                <ButtonRounded text='Login' />
+                <ButtonRounded text='Sign Up' />
             </div>
         </div>
      </main>
