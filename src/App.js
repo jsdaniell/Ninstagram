@@ -2,9 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import ButtonTheme from './components/ButtonTheme';
 import { useState } from 'react';
+import ButtonMenu from './components/ButtonMenu';
 
 function App() {
-   const [selectedTheme, setSelectedTheme] = useState("moon")
+   const [selectedTheme, setSelectedTheme] = useState("sun")
 
    const [selectedMenu, setSelectedMenu] = useState(1)
 
@@ -30,51 +31,61 @@ function App() {
      </header>
      <main className='middleContainer'>
         <div className='leftMiddleContainer'>
-            <div onClick={() => {
-                changeMenu(1)
-            }} className={`nonSelectedMenuButton ${selectedMenu === 1 ? "selectedButton" : ""}`}>
-              Edit profile
-            </div>
-            <div onClick={() => {
-               changeMenu(2)
-            }} className={`nonSelectedMenuButton ${selectedMenu === 2 ? "selectedButton" : ""}`}>
-              Account
-            </div>
-            <div onClick={() => {
-               changeMenu(3)
-            }} className={`nonSelectedMenuButton ${selectedMenu === 3 ? "selectedButton" : ""}`}>
-              Profile Insight
-            </div>
-            <div onClick={() => {
-               changeMenu(4)
-            }} className={`nonSelectedMenuButton ${selectedMenu === 4 ? "selectedButton" : ""}`}>
-              Change Password
-            </div>
-            <div onClick={() => {
-               changeMenu(5)
-            }} className={`nonSelectedMenuButton ${selectedMenu === 5 ? "selectedButton" : ""}`}>
-             Notifications
-            </div>
-            <div onClick={() => {
-                changeMenu(6)
-            }} className={`nonSelectedMenuButton ${selectedMenu === 6 ? "selectedButton" : ""}`}>
-             Privacy and Security
-            </div>
-            <div onClick={() => {
-                changeMenu(7)
-            }} className={`nonSelectedMenuButton ${selectedMenu === 7 ? "selectedButton" : ""}`}>
-             Login Activity
-            </div>
-            <div onClick={() => {
-                changeMenu(8)
-            }} className={`nonSelectedMenuButton ${selectedMenu === 8 ? "selectedButton" : ""}`}>
-             Help
-            </div>
-            <div onClick={() => {
-                changeMenu(9)
-            }} className={`nonSelectedMenuButton ${selectedMenu === 9 ? "selectedButton" : ""}`}>
-             Logout
-            </div>
+            <ButtonMenu 
+              changeMenu={changeMenu} 
+              text='Edit Profile' 
+              selectedMenu={selectedMenu} 
+              indexMenu={1} 
+            />
+            <ButtonMenu 
+              changeMenu={changeMenu}  
+              text='Account' 
+              selectedMenu={selectedMenu} 
+              indexMenu={2} 
+            />
+             <ButtonMenu 
+              changeMenu={changeMenu}  
+              text='Profile Insight' 
+              selectedMenu={selectedMenu} 
+              indexMenu={3} 
+            />
+             <ButtonMenu 
+              changeMenu={changeMenu}  
+              text='Change Password' 
+              selectedMenu={selectedMenu} 
+              indexMenu={4} 
+            />
+             <ButtonMenu 
+              changeMenu={changeMenu}  
+              text='Notifications' 
+              selectedMenu={selectedMenu} 
+              indexMenu={5} 
+            />
+             <ButtonMenu 
+              changeMenu={changeMenu}  
+              text='Privacy and Security' 
+              selectedMenu={selectedMenu} 
+              indexMenu={6} 
+            />
+             <ButtonMenu 
+              changeMenu={changeMenu}  
+              text='Login Activity' 
+              selectedMenu={selectedMenu} 
+              indexMenu={7} 
+            />
+             <ButtonMenu 
+              changeMenu={changeMenu}  
+              text='Help' 
+              selectedMenu={selectedMenu} 
+              indexMenu={8} 
+            />
+             <ButtonMenu 
+              changeMenu={changeMenu}  
+              text='Logout' 
+              selectedMenu={selectedMenu} 
+              indexMenu={9}
+              logoutButton
+            />
         </div>
         <div className='rightMiddleContainer'>
             <div className='rowOfCards'>

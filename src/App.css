@@ -173,3 +173,7 @@ i {
   column-gap: 10px;
   z-index: 5;
 }
+
+.exitButton {
+  color: red;
+}
